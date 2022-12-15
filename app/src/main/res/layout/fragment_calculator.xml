@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.CalculatorFragment"
+    android:gravity="center_horizontal"
+    android:padding="16dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        style="@style/textHeaders"
+        tools:text="calculate vat"
+        android:id="@+id/calculatorInfoTextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="2"
+            app:suffixText="SAR"
+            style="@style/materialTextLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/numberEditText"
+                android:hint="@string/amount_label"
+                style="@style/materialEditText"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="1"
+            app:suffixText="%"
+            style="@style/materialTextLayout"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/percentageEditText"
+                style="@style/materialEditText"
+                android:hint="@string/percentage_label"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/enterBtn"
+        style="@style/buttons1"
+        android:text="@string/show_result_btn"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        >
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/amount_after_result"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="amount after discount"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            />
+<!--        android:textSize="25sp"-->
+<!--        android:textColor="@color/black"-->
+        <TextView
+            android:gravity="center"
+            android:id="@+id/resultTextView"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="280\nSAR"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            />
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/black"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/detail_of_result"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="the discount amount"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+
+            />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/detailTextView"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            tools:text="20 SAR"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

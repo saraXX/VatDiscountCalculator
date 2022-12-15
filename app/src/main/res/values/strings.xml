@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Vat Discount Calculator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello Blank fragment</string>
+
+    <string name="fragmentOptionText">Choose A Calculator</string>
+
+    <string name="fragmentVatText">Calculate VAT Amount</string>
+    <string name="fragmentDiscountText">Calculate Discount Amount</string>
+
+    <string name="amount_after_discount">Amount After Discount</string>
+    <string name="amount_after_vat">Amount After VAT</string>
+
+    <string name="discount_amount">The Discounted Amount : </string>
+    <string name="increase_amount">The Amount Of Increase : </string>
+
+    <string name="amount_vat_hint">200</string>
+    <string name="amount_discount_hint">15</string>
+
+    <string name="percentage_hint">15</string>
+
+    <string name="percentage_label">Percent</string>
+    <string name="amount_label">Amount</string>
+
+    <string name="show_result_btn">Show Result</string>
+
+    <string name="snack_bar">Enter The Numbers</string>
+
+    <string name="VAT">VAT</string>
+    <string name="DISCOUNT">Discount</string>
+
+    <string name="currency">SAR</string>
+
+
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">حساب الضريبة و الخصم</string>
+    <string name="fragmentOptionText">اختار حاسبة</string>
+    <string name="fragmentVatText">احسب المبلغ بعد الضريبة</string>
+    <string name="fragmentDiscountText">احسب المبلغ بعد الخصم</string>
+    <string name="amount_after_discount">المبلغ بعد الخصم</string>
+    <string name="amount_after_vat">المبلغ بعد الضريبة</string>
+    <string name="discount_amount">مقدار الخصم</string>
+    <string name="increase_amount">مقدار الزيادة</string>
+    <string name="percentage_label">النسبة</string>
+    <string name="show_result_btn">النتيجة</string>
+    <string name="snack_bar">ادخل رقم</string>
+    <string name="amount_label">المبلغ</string>
+    <string name="VAT">ضريبة القيمة المضافة</string>
+    <string name="DISCOUNT">الخصم</string>
+    <string name="currency">ر.س</string>
+</resources>
