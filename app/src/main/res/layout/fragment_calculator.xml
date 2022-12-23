@@ -55,7 +55,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="50dp"
         >
         <TextView
             android:gravity="center_vertical"
@@ -64,10 +64,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             tools:text="amount after discount"
-            style="@style/TextAppearance.MaterialComponents.Headline5"
+            style="@style/TextAppearance.MaterialComponents.Body2"
             />
-<!--        android:textSize="25sp"-->
-<!--        android:textColor="@color/black"-->
+
         <TextView
             android:gravity="center"
             android:id="@+id/resultTextView"
@@ -75,11 +74,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             tools:text="280\nSAR"
-            style="@style/TextAppearance.MaterialComponents.Headline4"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             />
-<!--        android:textSize="25sp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:textColor="@color/black"-->
+
     </LinearLayout>
 
     <LinearLayout

@@ -6,33 +6,49 @@ import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
+/**
+ * amount -> input1
+ * percent -> input2
+ * _result -> result of calculation (either form VAT fun or discount fun)
+ * _percentageResult -> either the VAT amount or Discount Amount
+ *
+ * these are the four variable i need in this project for now
+ */
 class ResultViewModel : ViewModel() {
     private val _result = MutableLiveData<Float>()
     val result: LiveData<Float> = _result
 
-    private val _discountAmount = MutableLiveData<Float>()
-    val discountAmount: LiveData<Float> = _discountAmount
+    private val _percentageResult = MutableLiveData<Float>()
+    val percentageResult: LiveData<Float> = _percentageResult
 
-    private val _vatAmount = MutableLiveData<Float>()
-    val vatAmount: LiveData<Float> = _vatAmount
 
-    fun calculateVAT(number:Float, percentage:Float){
-        val temp = toPercentage(number, percentage)
-        _result.value = number+temp
+    //    pass (200, 15)
+    fun calculateVAT(amount: Float, percent: Float){
+        _percentageResult.value = percentageAmount(amount, percent) // 30
+        _result.value = amount + percentageAmount(amount, percent) // 230
     }
 
-
-    fun calculateDISCOUNT(number:Float, percentage:Float){
-        val temp = toPercentage(number, percentage)
-        _result.value = number-temp
+    //    pass (200, 15)
+    fun calculateDISCOUNT(amount :Float, percent:Float){
+        _percentageResult.value = percentageAmount(amount, percent) // 30
+        _result.value = amount - percentageAmount(amount, percent) // 170
     }
 
-    fun toPercentage(n : Float, p : Float): Float{
-        val temp = p/100
-        val temp2 =   temp * n
-        _vatAmount.value = temp2 //
-        _discountAmount.value = temp2
-        return temp2 // return 0.15 to calculate
+    /**
+     * pass 15
+     * return 0.15
+     */
+    private fun toDecimal(percent: Float): Float{
+        return percent/100
     }
+
+    /**
+     * pass (200, 15)
+     * return 30.0
+     */
+    private fun percentageAmount(amount: Float, percent: Float): Float{
+        return toDecimal(percent) * amount
+    }
+
 
 }
