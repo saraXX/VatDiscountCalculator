@@ -37,7 +37,6 @@ android {
 }
 
 dependencies {
-    def fragment_version = "1.5.5"
     def nav_version = "2.5.3"
 
 
@@ -54,8 +53,4 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     // Testing Navigation
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
-
-    // Kotlin
-    implementation "androidx.fragment:fragment-ktx:$fragment_version"
-
 }
